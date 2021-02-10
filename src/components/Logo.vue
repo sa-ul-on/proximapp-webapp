@@ -16,10 +16,10 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:400-Montserrat:400&display=swap');
 #logo-name{
-  font-family: "EB-Garamond";
-  font-weight: bold ;
+  font-family: Comfortaa;
+  font-weight: bold;
   font-size: 42px;
   color: #2f5597;
 }

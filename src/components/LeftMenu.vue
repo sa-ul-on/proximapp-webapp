@@ -8,29 +8,15 @@
           <Logo/>
         </b-row>
         <b-row class="mb-4" >
-          <a href="" class="btn btn-light w-100 voce-menu" >
-          <ph-arrows-out-line-horizontal :size="24" color="#6495ed" class="mr-3"/>
-            <i> Assembramenti</i>
+          <a href="/" class="btn w-100 voce-menu" v-bind:class="{ 'left-menu-active': index}" >
+          <ph-arrows-out-line-horizontal :size="24" color="#6495ed" class="mr-3"  />
+            Assembramenti
           </a>
         </b-row>
         <b-row class="my-4">
-          <a href="" class="btn btn-light w-100 voce-menu">
+          <a href="/worktime" class="btn w-100 voce-menu"  v-bind:class="{ 'left-menu-active': worktime}">
           <ph-buildings :size="24" color="green" class="mr-3" />
-            <i> Accessi</i>
-
-          </a>
-        </b-row>
-        <b-row class="my-4" >
-          <a href="" class="btn btn-light w-100 voce-menu">
-          <ph-clipboard-text :size="24" color="orange" class="mr-3" />
-            <i> Bacheca</i>
-
-          </a>
-        </b-row>
-        <b-row class="my-4" >
-          <a href="" class="btn btn-light w-100 voce-menu" >
-            <ph-warning :size="24" color="darkviolet" class="mr-3"  />
-            <i> Segnalazioni</i>
+            Accessi
           </a>
         </b-row>
         </div>
@@ -45,13 +31,24 @@ export default {
   name: "LeftMenu",
   components: {
     Logo,
-  }
+  },
+  props: {
+    index :  Boolean,
+    worktime: Boolean,
+    bacheca :  Boolean,
+    segnalazioni: Boolean
+  },
 }
 </script>
 
 <style scoped>
 .voce-menu{
+  font-size: large;
+  background-color: #fafafa;
   text-align: left;
 }
-
+.left-menu-active{
+  background-color: #e9e9e9;
+  color: #020202;
+}
 </style>
